@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./layoutmodule.css";
+import styles from "./layout.module.css";
 import NavigationMenu from "./../../components/Navigation/NavigationMenu/NavigationMenu";
 import HeaderImage from "../../components/HeaderImage/HeaderImage";
 
@@ -9,7 +9,9 @@ class Layout extends Component {
       <div className={styles.layout}>
         <NavigationMenu />
         <HeaderImage />
-        <main>{this.props.children}</main>
+        <main>
+          <div className={styles.inner}>{this.props.children}</div>
+        </main>
       </div>
     );
   }

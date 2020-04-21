@@ -1,0 +1,14 @@
+.navigationItem a {
+  color: #fff;
+  margin: 0 15px;
+  transition: all 0.2s ease;
+}
+
+.navigationItem a:hover {
+  transform: translateY(3px);
+  transition: all 0.2s ease;
+}
+
+:global .active {
+  color: #737373 !important;
+}
