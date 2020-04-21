@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 
-import "./App.css";
 import Layout from "./containers/Layout/Layout";
 import About from "./components/About/About";
 import Learn from "./components/Learn/Learn";
