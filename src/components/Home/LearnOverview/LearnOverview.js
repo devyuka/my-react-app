@@ -22,7 +22,7 @@ const learnOverview = () => {
         consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
         massa.
       </p>
-      <ArticleContainer />
+      <ArticleContainer isHome={true} />
       <Button pathName="/learn">MORE</Button>
     </section>
   );

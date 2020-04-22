@@ -1,0 +1,6 @@
+.categoryTabs {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 100px 0 50px;
+}

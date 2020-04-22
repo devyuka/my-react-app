@@ -24,11 +24,23 @@
 .categoryLabel {
   width: 80px;
   text-align: center;
-  background-color: #ba2908;
+  background-color: #000;
   font-size: 14px;
   padding: 2px;
   border-radius: 3px;
   color: #fff;
+}
+
+.categoryLabel01 {
+  background-color: #ffa34d;
+}
+
+.categoryLabel02 {
+  background-color: #1eb2a6;
+}
+
+.categoryLabel03 {
+  background-color: #ad62aa;
 }
 
 .articleBox:hover {
