@@ -13,7 +13,6 @@ class Layout extends Component {
   };
 
   componentDidMount() {
-    console.log(window.pageYOffset);
     window.addEventListener("scroll", this.handleScroll);
 
     this.props.history.listen((location, action) => {
@@ -24,13 +23,12 @@ class Layout extends Component {
     this.setState({ pathName: this.props.history.location.pathname });
   }
 
-  handleScroll = (event) => {
+  handleScroll = () => {
     let scrollTop =
       window.pageYOffset ||
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
-    console.log(scrollTop);
     if (scrollTop > 50) {
       this.setState({
         isPageYpositionTop: false,
