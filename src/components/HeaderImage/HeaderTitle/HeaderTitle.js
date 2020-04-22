@@ -3,11 +3,13 @@ import styles from "./headertitle.module.css";
 
 const headerTitle = (props) => {
   let keyTitle = null;
+  let className = [styles.mainTitle];
   switch (props.pathName) {
     case "/":
+      className = [styles.mainTitle, styles.home];
       keyTitle = (
         <React.Fragment>
-          <h1 className={styles.mainTitle}>
+          <h1 className={className.join(" ")}>
             EXPLORE
             <br />
             THE UNIVERSE
@@ -22,9 +24,10 @@ const headerTitle = (props) => {
       );
       break;
     case "/about":
+      className = [styles.mainTitle, styles.about];
       keyTitle = (
         <React.Fragment>
-          <h1 className={styles.mainTitle}>
+          <h1 className={className.join(" ")}>
             WHO WE ARE
             <br />
             &amp; WHAT WE DO
@@ -39,9 +42,10 @@ const headerTitle = (props) => {
       );
       break;
     case "/learn":
+      className = [styles.mainTitle, styles.learn];
       keyTitle = (
         <React.Fragment>
-          <h1 className={styles.mainTitle}>
+          <h1 className={className.join(" ")}>
             DIVE INTO
             <br />
             THE MYSTERY OF UNIVERSE
@@ -56,9 +60,10 @@ const headerTitle = (props) => {
       );
       break;
     case "/gallery":
+      className = [styles.mainTitle, styles.gallery];
       keyTitle = (
         <React.Fragment>
-          <h1 className={styles.mainTitle}>
+          <h1 className={className.join(" ")}>
             SEE THE OUTER WORLD
             <br />
             FROM SPACE

@@ -9,7 +9,22 @@
   letter-spacing: 3px;
   line-height: 1.3;
   margin-bottom: 20px;
+}
+
+.home {
   text-shadow: 2px 2px 3px #4c2593;
+}
+
+.about {
+  text-shadow: 2px 2px 3px #032939;
+}
+
+.learn {
+  text-shadow: 2px 2px 3px #005200;
+}
+
+.gallery {
+  text-shadow: 2px 2px 3px #003d85;
 }
 
 .subTitle {
