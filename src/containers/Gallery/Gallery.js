@@ -30,7 +30,10 @@ class Gallery extends Component {
             consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
             Aenean massa.
           </p>
-          <DateInput onChangeDate={this.props.onChangeDate} />
+          <DateInput
+            onChangeDate={this.props.onChangeDate}
+            date={this.props.date}
+          />
           {picOfDay}
         </section>
       </React.Fragment>
