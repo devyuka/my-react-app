@@ -9,9 +9,13 @@ import Footer from "./../../components/Footer/Footer";
 class Layout extends Component {
   state = {
     pathName: "/",
+    isPageYpositionTop: true,
   };
 
   componentDidMount() {
+    console.log(window.pageYOffset);
+    window.addEventListener("scroll", this.handleScroll);
+
     this.props.history.listen((location, action) => {
       this.setState({ pathName: location.pathname });
       return;
@@ -19,6 +23,24 @@ class Layout extends Component {
 
     this.setState({ pathName: this.props.history.location.pathname });
   }
+
+  handleScroll = (event) => {
+    let scrollTop =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+    console.log(scrollTop);
+    if (scrollTop > 50) {
+      this.setState({
+        isPageYpositionTop: false,
+      });
+    } else {
+      this.setState({
+        isPageYpositionTop: true,
+      });
+    }
+  };
 
   render() {
     let headerImage =
@@ -28,7 +50,7 @@ class Layout extends Component {
 
     return (
       <div className={styles.layout}>
-        <NavigationMenu />
+        <NavigationMenu isPageYpositionTop={this.state.isPageYpositionTop} />
         {headerImage}
         <main>
           <div className={styles.inner}>{this.props.children}</div>
