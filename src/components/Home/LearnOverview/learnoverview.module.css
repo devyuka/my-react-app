@@ -1,0 +1,48 @@
+.learnOverview {
+  color: #0e0e0e;
+}
+.learnOverview:before {
+  content: "";
+  display: block;
+  width: 200vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -50vw;
+  background-color: #d3e0df;
+  z-index: -1;
+}
+
+.outline {
+  margin-bottom: 30px;
+}
+
+.stripe {
+  width: 1px;
+  height: 100%;
+  background-color: rgba(57, 57, 57, 0.15);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.stripe1 {
+  left: 0;
+}
+
+.stripe2 {
+  left: 25%;
+}
+
+.stripe3 {
+  left: 50%;
+}
+
+.stripe4 {
+  left: 75%;
+}
+
+.stripe5 {
+  left: 100%;
+}

@@ -1,0 +1,11 @@
+.outline {
+  margin-bottom: 70px;
+}
+
+.aboutImg {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 435px;
+  opacity: 0.4;
+}

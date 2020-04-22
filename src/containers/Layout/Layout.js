@@ -3,6 +3,8 @@ import { withRouter } from "react-router-dom";
 import styles from "./layout.module.css";
 import NavigationMenu from "./../../components/Navigation/NavigationMenu/NavigationMenu";
 import HeaderImage from "../../components/HeaderImage/HeaderImage";
+import SocialMedia from "../../components/SocialMedia/SocialMedia";
+import Footer from "./../../components/Footer/Footer";
 
 class Layout extends Component {
   state = {
@@ -31,6 +33,8 @@ class Layout extends Component {
         <main>
           <div className={styles.inner}>{this.props.children}</div>
         </main>
+        <Footer />
+        <SocialMedia />
       </div>
     );
   }

@@ -2,5 +2,10 @@
   position: relative;
   width: 980px;
   margin: 0 auto;
-  background-color: #ccc;
+}
+
+main section {
+  margin-bottom: 80px;
+  padding: 50px;
+  position: relative;
 }

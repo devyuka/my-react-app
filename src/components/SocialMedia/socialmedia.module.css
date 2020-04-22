@@ -1,0 +1,23 @@
+.socialMedia {
+  width: 100px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border: 0.8px solid;
+  padding: 10px 5px;
+}
+
+.socialMedia ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.socialMedia ul li {
+  margin: 0 3px;
+}
+
+.socialMedia ul li img {
+  width: 22px;
+  height: 22px;
+}

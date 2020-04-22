@@ -1,0 +1,37 @@
+.articleBox {
+  width: 280px;
+  padding: 20px;
+  margin-bottom: 70px;
+  border-radius: 5px;
+  transition: all ease 0.3s;
+}
+
+.articleImg {
+  overflow: hidden;
+  width: 245px;
+  height: 135px;
+}
+
+.articleTitle {
+  margin-top: 5px;
+}
+
+.articleBody {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.categoryLabel {
+  width: 80px;
+  text-align: center;
+  background-color: #ba2908;
+  font-size: 14px;
+  padding: 2px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.articleBox:hover {
+  box-shadow: 0 0 20px #979797;
+  transition: all ease 0.3s;
+}

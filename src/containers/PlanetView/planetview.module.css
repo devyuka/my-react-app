@@ -1,0 +1,14 @@
+.outline {
+  margin-bottom: 30px;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.planetImageWrapper {
+  width: 630px;
+  margin: 25px auto 70px;
+  position: relative;
+}
