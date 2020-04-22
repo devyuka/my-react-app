@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./about.module.css";
 import Title from "./../UI/Title/Title";
 import Button from "./../UI/Button/Button";
 
-const about = () => {
+const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section>
       <Title>About us</Title>
@@ -30,4 +34,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

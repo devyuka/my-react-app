@@ -5,6 +5,10 @@ import Confirm from "./Confirm/Confirm";
 import Success from "./Success/Success";
 
 class Contact extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   state = {
     step: 1,
     contactFormValues: {

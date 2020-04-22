@@ -9,6 +9,7 @@ import Loader from "./../../components/UI/Loader/Loader";
 
 class Gallery extends Component {
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.onInitTodayPhoto();
   }
 
@@ -35,6 +36,16 @@ class Gallery extends Component {
             date={this.props.date}
           />
           {picOfDay}
+        </section>
+
+        <section>
+          <Title>See space photos fromNASA</Title>
+          <p className={styles.outline}>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa.
+          </p>
         </section>
       </React.Fragment>
     );

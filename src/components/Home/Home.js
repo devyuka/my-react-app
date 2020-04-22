@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AboutOverview from "./AboutOverview/AboutOverview";
 import LearnOverview from "./LearnOverview/LearnOverview";
 import PlaneView from "../../containers/PlanetView/PlanetView";
 
-const home = () => {
+const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <React.Fragment>
       <AboutOverview />
@@ -13,4 +17,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;
