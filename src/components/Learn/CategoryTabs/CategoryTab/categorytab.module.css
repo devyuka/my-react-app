@@ -24,6 +24,7 @@
 }
 .active {
   background: #f67575;
+  border: 1px solid #f67575;
   color: #fff;
   transition: all 0.3s ease;
 }
