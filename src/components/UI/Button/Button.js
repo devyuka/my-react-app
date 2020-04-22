@@ -4,9 +4,17 @@ import { NavLink } from "react-router-dom";
 
 const button = (props) => {
   let className = [styles.button];
-  if (props.type === "returnHome") {
-    className = [styles.button, styles.returnHome];
+  switch (props.type) {
+    case "returnHome":
+      className = [styles.button, styles.returnHome];
+      break;
+    case "learnMore":
+      className = [styles.button, styles.learnMore];
+      break;
+    default:
+      break;
   }
+
   return (
     <div className={className.join(" ")}>
       <NavLink to={props.pathName} exact>

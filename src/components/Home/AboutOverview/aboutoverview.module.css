@@ -8,4 +8,5 @@
   top: 50px;
   width: 435px;
   opacity: 0.4;
+  z-index: -1;
 }

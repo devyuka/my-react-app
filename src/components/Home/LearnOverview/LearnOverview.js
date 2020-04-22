@@ -23,7 +23,9 @@ const learnOverview = () => {
         massa.
       </p>
       <ArticleContainer isHome={true} />
-      <Button pathName="/learn">MORE</Button>
+      <Button pathName="/learn" type="learnMore">
+        MORE
+      </Button>
     </section>
   );
 };
