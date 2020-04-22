@@ -1,0 +1,11 @@
+.contact {
+  margin-top: 100px;
+  color: #000;
+}
+
+.contactForm {
+  width: 800px;
+  margin: auto;
+  padding: 35px;
+  background-color: #fff;
+}

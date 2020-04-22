@@ -1,0 +1,22 @@
+.title {
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 30px;
+  letter-spacing: 2spx;
+  text-align: center;
+}
+
+.text {
+  color: #545454;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

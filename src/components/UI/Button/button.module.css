@@ -12,3 +12,9 @@
 .button a {
   color: #fff;
 }
+
+.returnHome {
+  background-color: #000;
+  border-radius: 5px;
+  font-size: 13px;
+}
