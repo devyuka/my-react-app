@@ -18,6 +18,7 @@ const articleBoxes = (props) => {
             body={article.articleBody}
             category={article.articleCategory}
             imgName={article.articleImg}
+            isHome={props.isHome}
           />
         ))}
     </ul>

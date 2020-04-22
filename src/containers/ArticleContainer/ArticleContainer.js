@@ -113,6 +113,7 @@ class ArticleContainer extends Component {
         <ArticleBoxes
           articles={this.state.articles}
           selectedCategoryId={this.state.selectedCategoryId}
+          isHome={this.state.isHome}
         />
       </React.Fragment>
     );
@@ -121,6 +122,7 @@ class ArticleContainer extends Component {
         <ArticleBoxes
           articles={this.state.firstThreeArticles}
           selectedCategoryId={0}
+          isHome={this.state.isHome}
         />
       );
     }

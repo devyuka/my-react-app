@@ -6,6 +6,10 @@
   transition: all ease 0.3s;
 }
 
+.articleBox.isHome:hover {
+  background-color: #d3e0df;
+}
+
 .articleImg {
   overflow: hidden;
   width: 245px;
