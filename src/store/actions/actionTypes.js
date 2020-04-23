@@ -1,3 +1,4 @@
+//Gallery
 export const SET_POSTS = "SET_POSTS";
 export const FETCH_POSTS_FAILED = "FETCH_POSTS_FAILED";
 export const SET_TODAY_PHOTO = "SET_TODAY_PHOTO";
@@ -5,3 +6,8 @@ export const FETCH_TODAY_PHOTO_FAILED = "FETCH_TODAY_PHOTO_FAILED";
 export const SET_PHOTO = "SET_PHOTO";
 export const FETCH_PHOTO_FAILED = "FETCH_PHOTO_FAILED";
 export const LOADING = "LOADING";
+
+//Learn
+export const SET_ARTICLES = "SET_ARTICLES";
+export const FETCH_ARTICLES_FAILED = "FETCH_ARTICLES_FAILED";
+export const SELECT_ARTICLE = "SELECT_ARTICLE";

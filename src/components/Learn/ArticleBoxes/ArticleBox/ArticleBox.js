@@ -40,6 +40,9 @@ const articleBox = (props) => {
             category: props.category,
           },
         }}
+        onClick={() => {
+          props.onSelectArticle(props.id);
+        }}
       >
         <div className={styles.articleImg}>
           <img src={require(`../../../../assets/images/${props.imgName}`)} />

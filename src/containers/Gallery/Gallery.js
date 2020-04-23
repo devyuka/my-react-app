@@ -54,9 +54,9 @@ class Gallery extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    date: state.date,
-    photo: state.photo,
-    loading: state.loading,
+    date: state.gallery.date,
+    photo: state.gallery.photo,
+    loading: state.gallery.loading,
   };
 };
 

@@ -1,101 +1,19 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import * as actions from "../../store/actions";
 import ArticleBoxes from "../../components/Learn/ArticleBoxes/ArticleBoxes";
 import CategoryTabs from "../../components/Learn/CategoryTabs/CategoryTabs";
 
 class ArticleContainer extends Component {
-  //temp data
-  articles = [
-    {
-      articleId: 0,
-      articleImg: "article_img_01.jpg",
-      articleTitle: "Title01",
-      articleBody:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
-      articleCategory: 1,
-    },
-    {
-      articleId: 1,
-      articleImg: "article_img_02.jpg",
-      articleTitle: "Title02",
-      articleBody:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
-      articleCategory: 2,
-    },
-    {
-      articleId: 2,
-      articleImg: "article_img_03.jpg",
-      articleTitle: "Title03",
-      articleBody:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
-      articleCategory: 3,
-    },
-    {
-      articleId: 3,
-      articleImg: "article_img_01.jpg",
-      articleTitle: "Title03",
-      articleBody:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
-      articleCategory: 1,
-    },
-    {
-      articleId: 4,
-      articleImg: "article_img_02.jpg",
-      articleTitle: "Title04",
-      articleBody:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
-      articleCategory: 2,
-    },
-    {
-      articleId: 5,
-      articleImg: "article_img_03.jpg",
-      articleTitle: "Title05",
-      articleBody:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
-      articleCategory: 3,
-    },
-    {
-      articleId: 6,
-      articleImg: "article_img_03.jpg",
-      articleTitle: "Title06",
-      articleBody:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
-      articleCategory: 3,
-    },
-    {
-      articleId: 7,
-      articleImg: "article_img_01.jpg",
-      articleTitle: "Title07",
-      articleBody:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
-      articleCategory: 1,
-    },
-    {
-      articleId: 8,
-      articleImg: "article_img_02.jpg",
-      articleTitle: "Title08",
-      articleBody:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
-      articleCategory: 2,
-    },
-  ];
-
   state = {
-    articles: [],
     isHome: false,
-    firstThreeArticles: [],
+    selectedCategoryId: 0,
   };
 
   componentDidMount() {
+    this.props.onInitArticles();
     this.setState({
-      articles: this.articles,
       isHome: this.props.isHome,
-      firstThreeArticles: [
-        this.articles[0],
-        this.articles[1],
-        this.articles[2],
-      ],
-      selectedCategoryId: 0,
-      selectedArticleId: null,
     });
   }
 
@@ -111,8 +29,9 @@ class ArticleContainer extends Component {
           selectedCategoryId={this.state.selectedCategoryId}
         />
         <ArticleBoxes
-          articles={this.state.articles}
+          articles={this.props.articles}
           selectedCategoryId={this.state.selectedCategoryId}
+          onSelectArticle={this.props.onSelectArticle}
           isHome={this.state.isHome}
         />
       </React.Fragment>
@@ -120,8 +39,9 @@ class ArticleContainer extends Component {
     if (this.state.isHome) {
       articles = (
         <ArticleBoxes
-          articles={this.state.firstThreeArticles}
+          articles={this.props.firstThreeArticles}
           selectedCategoryId={0}
+          onSelectArticle={this.props.onSelectArticle}
           isHome={this.state.isHome}
         />
       );
@@ -131,4 +51,24 @@ class ArticleContainer extends Component {
   }
 }
 
-export default ArticleContainer;
+const mapStateToProps = (state) => {
+  return {
+    articles: state.learn.articles,
+    firstThreeArticles: state.learn.firstThreeArticles,
+    selectedArticleId: state.learn.selectedArticleId,
+    error: state.learn.error,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onInitArticles: () => {
+      dispatch(actions.initArticles());
+    },
+    onSelectArticle: (id) => {
+      dispatch(actions.selectArticle(id));
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ArticleContainer);
