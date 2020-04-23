@@ -1,2 +1,2 @@
 export { initTodayPhoto, changeDate } from "./gallery";
-export { initArticles, selectArticle } from "./learn";
+export { initArticles, initSingleArticle } from "./learn";

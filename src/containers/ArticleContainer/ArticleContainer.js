@@ -31,7 +31,6 @@ class ArticleContainer extends Component {
         <ArticleBoxes
           articles={this.props.articles}
           selectedCategoryId={this.state.selectedCategoryId}
-          onSelectArticle={this.props.onSelectArticle}
           isHome={this.state.isHome}
         />
       </React.Fragment>
@@ -41,7 +40,6 @@ class ArticleContainer extends Component {
         <ArticleBoxes
           articles={this.props.firstThreeArticles}
           selectedCategoryId={0}
-          onSelectArticle={this.props.onSelectArticle}
           isHome={this.state.isHome}
         />
       );
@@ -55,7 +53,6 @@ const mapStateToProps = (state) => {
   return {
     articles: state.learn.articles,
     firstThreeArticles: state.learn.firstThreeArticles,
-    selectedArticleId: state.learn.selectedArticleId,
     error: state.learn.error,
   };
 };
@@ -64,9 +61,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onInitArticles: () => {
       dispatch(actions.initArticles());
-    },
-    onSelectArticle: (id) => {
-      dispatch(actions.selectArticle(id));
     },
   };
 };

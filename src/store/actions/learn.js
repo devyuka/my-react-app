@@ -17,17 +17,9 @@ export const fetchArticlesFailed = (error) => {
 //temp data
 const articles = [
   {
-    articleId: 0,
-    articleImg: "article_img_01.jpg",
-    articleTitle: "Title01",
-    articleBody:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
-    articleCategory: 1,
-  },
-  {
     articleId: 1,
     articleImg: "article_img_02.jpg",
-    articleTitle: "Title02",
+    articleTitle: "Title01",
     articleBody:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
     articleCategory: 2,
@@ -35,7 +27,7 @@ const articles = [
   {
     articleId: 2,
     articleImg: "article_img_03.jpg",
-    articleTitle: "Title03",
+    articleTitle: "Title02",
     articleBody:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
     articleCategory: 3,
@@ -88,6 +80,14 @@ const articles = [
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
     articleCategory: 2,
   },
+  {
+    articleId: 9,
+    articleImg: "article_img_02.jpg",
+    articleTitle: "Title09",
+    articleBody:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
+    articleCategory: 2,
+  },
 ];
 
 export const initArticles = () => {
@@ -111,9 +111,34 @@ export const initArticles = () => {
   };
 };
 
-export const selectArticle = (id) => {
+// export const selectArticle = (id) => {
+//   return {
+//     type: actionTypes.SELECT_ARTICLE,
+//     id: id,
+//   };
+// };
+
+export const setSingleArticle = (id, article) => {
   return {
-    type: actionTypes.SELECT_ARTICLE,
+    type: actionTypes.SET_SINGLE_ARTICLE,
+    singleArticle: article,
     id: id,
+  };
+};
+
+export const fetchSingleArticleFailed = (error) => {
+  return {
+    type: actionTypes.FETCH_SINGLE_ARTICLE_FAILED,
+    error: error,
+  };
+};
+
+export const initSingleArticle = (id) => {
+  return (dispatch) => {
+    if (true) {
+      dispatch(setSingleArticle(id, articles[id - 1]));
+    } else {
+      dispatch(fetchSingleArticleFailed());
+    }
   };
 };

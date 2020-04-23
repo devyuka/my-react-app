@@ -2,8 +2,9 @@ import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
   articles: [],
+  singleArticle: null,
   firstThreeArticles: [],
-  selectedArticleId: null,
+  articleId: null,
   error: false,
 };
 
@@ -26,11 +27,25 @@ const reducer = (state = initialState, action) => {
         error: true,
       };
 
-    case actionTypes.SELECT_ARTICLE:
+    // case actionTypes.SELECT_ARTICLE:
+    //   return {
+    //     ...state,
+    //     articleId: action.id,
+    //   };
+
+    case actionTypes.SET_SINGLE_ARTICLE:
       return {
         ...state,
-        selectedArticleId: action.id,
+        singleArticle: action.singleArticle,
+        articleId: action.id,
       };
+
+    case actionTypes.FETCH_SINGLE_ARTICLE_FAILED:
+      return {
+        ...state,
+        error: true,
+      };
+
     default:
       return state;
   }

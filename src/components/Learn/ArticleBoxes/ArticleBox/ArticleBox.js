@@ -34,14 +34,8 @@ const articleBox = (props) => {
           pathname: "/article",
           search: `?${props.id}`,
           state: {
-            imgName: props.imgName,
-            title: props.title,
-            body: props.body,
-            category: props.category,
+            id: props.id,
           },
-        }}
-        onClick={() => {
-          props.onSelectArticle(props.id);
         }}
       >
         <div className={styles.articleImg}>

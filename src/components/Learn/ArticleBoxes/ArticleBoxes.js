@@ -20,7 +20,6 @@ const articleBoxes = (props) => {
             category={article.articleCategory}
             imgName={article.articleImg}
             isHome={props.isHome}
-            onSelectArticle={props.onSelectArticle}
           />
         ))}
     </ul>
