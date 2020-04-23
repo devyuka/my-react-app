@@ -12,6 +12,26 @@ class Article extends Component {
   };
 
   componentDidMount() {
+    console.log("componentDidMount called");
+    this.init();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("componentDidUpdate is called");
+    console.log(prevState);
+    console.log(
+      "this.state.pageId:" +
+        this.state.pageId +
+        " prevState.pageId" +
+        prevState.pageId
+    );
+    if (this.state.pageId !== prevState.pageId) {
+      console.log("page id changed");
+    }
+    this.init();
+  }
+
+  init() {
     window.scrollTo(0, 0);
     window.addEventListener("popstate", this.popstateHandler);
 
@@ -31,12 +51,17 @@ class Article extends Component {
 
     this.props.history.listen((location, action) => {
       this.setState({ pageId: parseInt(location.search.replace("?", "")) });
-      return;
     });
   }
 
   popstateHandler = () => {
+    console.log("popstateHandler is called");
+    console.log(this.state.pageId);
     this.props.onSingleArticle(this.state.pageId);
+    // this.props.history.listen((location, action) => {
+    //   console.log("is called" + location);
+    //   this.setState({ pageId: parseInt(location.search.replace("?", "")) });
+    // });
   };
 
   prevNextHandler = (id) => {

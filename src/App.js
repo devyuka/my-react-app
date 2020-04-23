@@ -18,7 +18,10 @@ const App = () => {
           <Route path="/learn" component={Learn} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/contact" component={Contact} />
-          <Route path="/article" component={Article} />
+          <Route
+            path="/article"
+            render={(props) => <Article {...props} key={Math.random()} />}
+          />
           <Route path="/" exact component={Home} />
           <Redirect to="/" />
         </Switch>
