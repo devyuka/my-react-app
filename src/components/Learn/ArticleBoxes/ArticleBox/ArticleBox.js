@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./articlebox.module.css";
+import { NavLink } from "react-router-dom";
 
 const articleBox = (props) => {
   let category = null;
@@ -28,12 +29,25 @@ const articleBox = (props) => {
 
   return (
     <li className={classNameBox.join(" ")}>
-      <div className={styles.articleImg}>
-        <img src={require(`../../../../assets/images/${props.imgName}`)} />
-      </div>
-      <h3 className={styles.articleTitle}>{props.title}</h3>
-      <p className={styles.articleBody}>{props.body}</p>
-      <div className={classNameLabel.join(" ")}>{category}</div>
+      <NavLink
+        to={{
+          pathname: "/article",
+          search: `?${props.id}`,
+          state: {
+            imgName: props.imgName,
+            title: props.title,
+            body: props.body,
+            category: props.category,
+          },
+        }}
+      >
+        <div className={styles.articleImg}>
+          <img src={require(`../../../../assets/images/${props.imgName}`)} />
+        </div>
+        <h3 className={styles.articleTitle}>{props.title}</h3>
+        <p className={styles.articleBody}>{props.body}</p>
+        <div className={classNameLabel.join(" ")}>{category}</div>
+      </NavLink>
     </li>
   );
 };

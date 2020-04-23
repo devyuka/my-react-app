@@ -14,6 +14,7 @@ const articleBoxes = (props) => {
         .map((article) => (
           <ArticleBox
             key={article.articleId}
+            id={article.articleId}
             title={article.articleTitle}
             body={article.articleBody}
             category={article.articleCategory}

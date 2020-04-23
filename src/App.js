@@ -7,6 +7,7 @@ import Learn from "./components/Learn/Learn";
 import Gallery from "./containers/Gallery/Gallery";
 import Contact from "./containers/Contact/Contact";
 import Home from "./components/Home/Home";
+import Article from "./components/Learn/Article/Article";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/learn" component={Learn} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/contact" component={Contact} />
+          <Route path="/article" component={Article} />
           <Route path="/" exact component={Home} />
           <Redirect to="/" />
         </Switch>

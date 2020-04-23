@@ -6,8 +6,16 @@
   transition: all ease 0.3s;
 }
 
+.articleBox a {
+  color: #fff;
+}
+
 .articleBox.isHome:hover {
   background-color: #d3e0df;
+}
+
+.articleBox.isHome a {
+  color: #000;
 }
 
 .articleImg {
@@ -17,12 +25,18 @@
 }
 
 .articleTitle {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .articleBody {
+  min-height: 100px;
   font-size: 12px;
   margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 .categoryLabel {

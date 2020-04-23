@@ -42,7 +42,8 @@ class Layout extends Component {
 
   render() {
     let headerImage =
-      this.state.pathName !== "/contact" ? (
+      this.state.pathName !== "/contact" &&
+      this.state.pathName !== "/article" ? (
         <HeaderImage pathName={this.state.pathName} />
       ) : null;
 
