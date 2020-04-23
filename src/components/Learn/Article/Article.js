@@ -7,16 +7,20 @@ import stylesArticleBox from "../ArticleBoxes/ArticleBox/articlebox.module.css";
 
 class Article extends Component {
   state = {
-    search: "",
+    pageId: "",
     pagenationClicked: false,
   };
+
   componentDidMount() {
     window.scrollTo(0, 0);
+    window.addEventListener("popstate", this.popstateHandler);
+
     let id = null;
 
     if (!this.state.pagenationClicked) {
       // form Home or Learn page
-      id = this.props.location.state.id;
+      //id = this.props.location.state.id;
+      id = parseInt(this.props.location.search.replace("?", ""));
     } else {
       // page refreshed
       id = this.props.articleId;
@@ -26,13 +30,16 @@ class Article extends Component {
     if (!this.state.pagenationClicked) this.props.onSingleArticle(id);
 
     this.props.history.listen((location, action) => {
-      this.setState({ search: location.search });
+      this.setState({ pageId: parseInt(location.search.replace("?", "")) });
       return;
     });
   }
 
+  popstateHandler = () => {
+    this.props.onSingleArticle(this.state.pageId);
+  };
+
   prevNextHandler = (id) => {
-    console.log(this.props.history);
     this.setState({ pagenationClicked: true });
     this.props.onSingleArticle(id);
   };
@@ -71,7 +78,7 @@ class Article extends Component {
 
       let pagination = (
         <ul>
-          {this.props.articleId > 0 ? (
+          {this.props.articleId > 1 ? (
             <li>
               <NavLink
                 to={{

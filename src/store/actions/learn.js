@@ -21,7 +21,7 @@ const articles = [
     articleImg: "article_img_02.jpg",
     articleTitle: "Title01",
     articleBody:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa 1.",
     articleCategory: 2,
   },
   {
@@ -29,7 +29,7 @@ const articles = [
     articleImg: "article_img_03.jpg",
     articleTitle: "Title02",
     articleBody:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa 2.",
     articleCategory: 3,
   },
   {
@@ -37,7 +37,7 @@ const articles = [
     articleImg: "article_img_01.jpg",
     articleTitle: "Title03",
     articleBody:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa 3.",
     articleCategory: 1,
   },
   {
@@ -45,7 +45,7 @@ const articles = [
     articleImg: "article_img_02.jpg",
     articleTitle: "Title04",
     articleBody:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa 4.",
     articleCategory: 2,
   },
   {
@@ -53,7 +53,7 @@ const articles = [
     articleImg: "article_img_03.jpg",
     articleTitle: "Title05",
     articleBody:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa 5.",
     articleCategory: 3,
   },
   {
@@ -61,7 +61,7 @@ const articles = [
     articleImg: "article_img_03.jpg",
     articleTitle: "Title06",
     articleBody:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa 6.",
     articleCategory: 3,
   },
   {
@@ -69,7 +69,7 @@ const articles = [
     articleImg: "article_img_01.jpg",
     articleTitle: "Title07",
     articleBody:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa 7.",
     articleCategory: 1,
   },
   {
@@ -77,7 +77,7 @@ const articles = [
     articleImg: "article_img_02.jpg",
     articleTitle: "Title08",
     articleBody:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa 8.",
     articleCategory: 2,
   },
   {
@@ -85,7 +85,7 @@ const articles = [
     articleImg: "article_img_02.jpg",
     articleTitle: "Title09",
     articleBody:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa 9.",
     articleCategory: 2,
   },
 ];
