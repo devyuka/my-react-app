@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import * as actions from "../../../store/actions";
+import * as actions from "../../store/actions";
 import { NavLink } from "react-router-dom";
 import styles from "./article.module.css";
-import stylesArticleBox from "../ArticleBoxes/ArticleBox/articlebox.module.css";
+import stylesArticleBox from "../../components/Learn/ArticleBoxes/ArticleBox/articlebox.module.css";
 
 class Article extends Component {
   componentDidMount() {
@@ -100,7 +100,7 @@ class Article extends Component {
             </li>
             <div className={styles.articleImg}>
               <img
-                src={require(`../../../assets/images/${this.props.singleArticle.articleImg}`)}
+                src={require(`../../assets/images/${this.props.singleArticle.articleImg}`)}
               />
             </div>
             <li className={styles.body}>
