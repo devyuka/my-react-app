@@ -2,13 +2,7 @@ import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
   articles: [],
-  singleArticle: {
-    articleId: 4,
-    articleImg: "article_img_02.jpg",
-    articleTitle: "INITIAL TEMPTitle04",
-    articleBody: "INITIAL TEMPT adipiscingINITIAL TEMPT",
-    articleCategory: 2,
-  },
+  singleArticle: null,
   firstThreeArticles: [],
   articleId: null,
   error: false,
