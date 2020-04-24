@@ -5,6 +5,8 @@ import { NavLink } from "react-router-dom";
 import styles from "./article.module.css";
 import stylesArticleBox from "../../components/Learn/ArticleBoxes/ArticleBox/articlebox.module.css";
 
+const NUM_OF_ARTICLES = 9;
+
 class Article extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -50,9 +52,9 @@ class Article extends Component {
       }
 
       let pagination = (
-        <ul>
+        <ul className={styles.pagination}>
           {this.props.articleId > 1 ? (
-            <li>
+            <li className={styles.prev}>
               <NavLink
                 to={{
                   pathname: "/article",
@@ -68,9 +70,14 @@ class Article extends Component {
                 PREV
               </NavLink>
             </li>
-          ) : null}
-          {this.props.articleId < 8 ? (
-            <li>
+          ) : (
+            <li className={styles.disabled}>PREV</li>
+          )}
+          <li className={styles.seeAllButton}>
+            <NavLink to="./learn">SEE ALL POSTS</NavLink>
+          </li>
+          {this.props.articleId < NUM_OF_ARTICLES ? (
+            <li className={styles.next}>
               <NavLink
                 to={{
                   pathname: "/article",
@@ -86,7 +93,9 @@ class Article extends Component {
                 NEXT
               </NavLink>
             </li>
-          ) : null}
+          ) : (
+            <li className={styles.disabled}>NEXT</li>
+          )}
         </ul>
       );
 
