@@ -3,6 +3,7 @@
   height: 100vh;
   overflow: hidden;
   margin-bottom: 50px;
+  background: #000;
 }
 
 .headerImageInner {
@@ -11,9 +12,46 @@
   position: relative;
 }
 
+.keyImg {
+  opacity: 0;
+  animation-name: fade01;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
 .video {
-  filter: opacity(60%);
+  opacity: 0;
+  filter: opacity(100%);
   position: absolute;
   top: 0;
   left: 0;
+  animation-name: fade02;
+  animation-duration: 7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade01 {
+  0% {
+    opacity: 0;
+    filter: opacity(100%);
+  }
+  100% {
+    opacity: 1;
+    filter: opacity(60%);
+  }
+}
+
+@keyframes fade02 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    filter: opacity(100%);
+  }
+  100% {
+    opacity: 1;
+    filter: opacity(60%);
+  }
 }

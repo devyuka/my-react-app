@@ -19,7 +19,7 @@ const headerImage = (props) => {
             <source src={keyVideo01} type="video/mp4" />
             <source src={keyVideo02} type="video/webm" />
           </video>
-          <div>
+          <div className={styles.keyImg}>
             <img src={keyImgHome} />
           </div>
         </React.Fragment>
