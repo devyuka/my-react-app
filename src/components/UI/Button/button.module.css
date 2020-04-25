@@ -24,12 +24,12 @@
 .returnHome a {
   border: 1px solid;
   border-radius: 5px;
-  background-color: #000;
+  background-color: #3a3a3a;
   font-size: 13px;
 }
 
 .returnHome a:hover {
-  background-color: #3a3a3a;
+  background-color: #3a3a3ad3;
   color: #fff;
 }
 
