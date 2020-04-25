@@ -38,7 +38,7 @@
   }
   100% {
     opacity: 1;
-    filter: opacity(60%);
+    filter: opacity(40%);
   }
 }
 
