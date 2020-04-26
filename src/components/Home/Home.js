@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AboutOverview from "./AboutOverview/AboutOverview";
 import LearnOverview from "./LearnOverview/LearnOverview";
 import PlaneView from "../../containers/PlanetView/PlanetView";
-import Vote from "./../../containers/Vote/Vote";
+import Poll from "./../../containers/Poll/Poll";
 
 const Home = () => {
   useEffect(() => {
@@ -14,7 +14,7 @@ const Home = () => {
       <AboutOverview />
       <LearnOverview />
       <PlaneView />
-      <Vote />
+      <Poll />
     </React.Fragment>
   );
 };
