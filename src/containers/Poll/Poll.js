@@ -27,13 +27,15 @@ const Poll = (props) => {
       : null;
 
     if (retrievedObject) {
-      if (JSON.parse(retrievedObject)[0]) {
-        setIsVoted({ ...isVoted, [0]: true });
-      } else if (JSON.parse(retrievedObject)[1]) {
-        setIsVoted({ ...isVoted, [1]: true });
-      } else if (JSON.parse(retrievedObject)[2]) {
-        setIsVoted({ ...isVoted, [2]: true });
+      const newIsVoted = {};
+      for (let i = 0; i < retrievedObject.length; i++) {
+        if (JSON.parse(retrievedObject)[i]) {
+          newIsVoted[i] = true;
+        } else {
+          newIsVoted[i] = false;
+        }
       }
+      setIsVoted(newIsVoted);
     }
   };
 
