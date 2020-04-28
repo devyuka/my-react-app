@@ -2,6 +2,7 @@ import * as actionTypes from "../actions/actionTypes";
 const initialState = {
   chartData: {},
   chartsRefs: {},
+  uniqueKey: null,
   loading: false,
 };
 
@@ -11,6 +12,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         chartData: action.chartData,
+        uniqueKey: action.uniqueKey,
         loading: false,
       };
 

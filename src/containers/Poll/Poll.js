@@ -63,7 +63,7 @@ const Poll = (props) => {
     newData[id].datasets[0].data[index] =
       newData[id].datasets[0].data[index] + 1;
 
-    props.onVote(newData);
+    props.onVote(newData, props.uniqueKey);
 
     const chart = props.chartsRefs[id].chartInstance;
     chart.update();
@@ -222,6 +222,7 @@ const Poll = (props) => {
 const mapStateToProps = (state) => {
   return {
     chartData: state.poll.chartData,
+    uniqueKey: state.poll.uniqueKey,
     chartsRefs: state.poll.chartsRefs,
   };
 };
@@ -231,8 +232,8 @@ const mapDispatchToProps = (dispatch) => {
     onInitCharts: () => {
       dispatch(actions.initCharts());
     },
-    onVote: (data) => {
-      dispatch(actions.vote(data));
+    onVote: (data, uniqueKey) => {
+      dispatch(actions.vote(data, uniqueKey));
     },
   };
 };

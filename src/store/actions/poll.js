@@ -1,10 +1,11 @@
 import * as actionTypes from "../actions/actionTypes";
 import axios from "../../axios/axios-universe";
 
-export const setCharts = (data) => {
+export const setCharts = (data, uniqueKey) => {
   return {
     type: actionTypes.SET_CHARTS,
     chartData: data,
+    uniqueKey: uniqueKey,
   };
 };
 
@@ -21,14 +22,17 @@ export const initCharts = () => {
       .get("/polls.json")
       .then((response) => {
         let responseData = {};
+        let uniqueKey = null;
         for (let key in response.data) {
           responseData = response.data[key];
+          uniqueKey = key;
         }
+
         let data = {};
         for (let i = 0; i < responseData.length; i++) {
           data[i] = responseData[i];
         }
-        dispatch(setCharts(data));
+        dispatch(setCharts(data, uniqueKey));
       })
       .catch((error) => {
         dispatch(fetchChartsFailed(error));
@@ -36,10 +40,10 @@ export const initCharts = () => {
   };
 };
 
-export const vote = (data) => {
+export const vote = (data, uniqueKey) => {
   return (dispatch) => {
     axios
-      .post("/polls.json", data)
+      .put("/polls/" + uniqueKey + ".json", data)
       .then((response) => {
         dispatch(initCharts());
       })
