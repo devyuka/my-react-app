@@ -5,7 +5,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { Button } from "@material-ui/core";
 
-import axios from "../../../axios/axios-form";
+import axios from "../../../axios/axios-universe";
 
 class Confirm extends Component {
   submitHandler = (e) => {

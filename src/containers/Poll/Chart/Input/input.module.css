@@ -1,0 +1,14 @@
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.inputWrapper input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.inputWrapper input:checked + label {
+  color: #ff7c72;
+}

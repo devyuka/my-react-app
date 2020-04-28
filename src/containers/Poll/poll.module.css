@@ -1,3 +1,21 @@
 .outline {
   margin-bottom: 70px;
 }
+
+.buttonsBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.button {
+  margin: 0 10px;
+  border: 1px solid #fff;
+  background: #000;
+  color: #fff;
+  padding: 5px 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  outline: none;
+}

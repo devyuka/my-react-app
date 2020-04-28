@@ -12,6 +12,7 @@ import thunk from "redux-thunk";
 
 import galleryReducer from "./store/reducers/gallery";
 import learnReducer from "./store/reducers/learn";
+import pollReducer from "./store/reducers/poll";
 
 const composeEnhancers =
   process.env.NODE_ENV === "development"
@@ -21,6 +22,7 @@ const composeEnhancers =
 const rootReducer = combineReducers({
   gallery: galleryReducer,
   learn: learnReducer,
+  poll: pollReducer,
 });
 
 const store = createStore(
