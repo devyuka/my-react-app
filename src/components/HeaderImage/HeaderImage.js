@@ -16,7 +16,7 @@ const headerImage = (props) => {
       keyImg = (
         <React.Fragment>
           <div className={styles.keyImg}>
-            <img src={keyImgHome} />
+            <img src={keyImgHome} alt="" />
           </div>
         </React.Fragment>
       );
@@ -24,21 +24,21 @@ const headerImage = (props) => {
     case "/about":
       keyImg = (
         <div className={styles.keyImg}>
-          <img src={keyImgAbout} />
+          <img src={keyImgAbout} alt="" />
         </div>
       );
       break;
     case "/learn":
       keyImg = (
         <div className={styles.keyImg}>
-          <img src={keyImgLearn} />
+          <img src={keyImgLearn} alt="" />
         </div>
       );
       break;
     case "/gallery":
       keyImg = (
         <div className={styles.keyImg}>
-          <img src={keyImgGallery} />
+          <img src={keyImgGallery} alt="" />
         </div>
       );
       break;

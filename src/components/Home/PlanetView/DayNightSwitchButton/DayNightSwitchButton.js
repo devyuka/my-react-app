@@ -8,12 +8,12 @@ const dayNightSwitchButton = (props) => {
   }
   return (
     <div className={className.join(" ")}>
-      <a className={styles.switch} onClick={props.dayNightSwitchHandler}>
+      <button className={styles.switch} onClick={props.dayNightSwitchHandler}>
         Day
-      </a>
-      <a className={styles.switch} onClick={props.dayNightSwitchHandler}>
+      </button>
+      <button className={styles.switch} onClick={props.dayNightSwitchHandler}>
         Night
-      </a>
+      </button>
     </div>
   );
 };

@@ -11,13 +11,17 @@ const imageDetailModal = (props) => {
           className={styles.close}
           src={closeIcon}
           onClick={props.modalCloseHandler}
+          alt={props.singleImgData.singleDescription}
         />
         <div className={styles.container}>
           <span className={styles.date}>
             {props.singleImgData.singleDateCreated}
           </span>
           <div className={styles.detailImg}>
-            <img src={props.singleImgData.singleImgURL} />
+            <img
+              src={props.singleImgData.singleImgURL}
+              alt={props.singleImgData.singleDescription}
+            />
           </div>
           <p className={styles.desc}>{props.singleImgData.singleDescription}</p>
         </div>

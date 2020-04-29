@@ -53,7 +53,7 @@ const planetImage = (props) => {
       );
       break;
     case 5:
-      Venus: planetImg = props.dayNightSwitch ? (
+      planetImg = props.dayNightSwitch ? (
         <img src={SaturnViewDayImg} alt="Saturn" />
       ) : (
         <img src={SaturnViewNightImg} alt="Saturn" />

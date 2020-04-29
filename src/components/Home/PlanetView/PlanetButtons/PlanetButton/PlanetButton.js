@@ -13,7 +13,10 @@ const planetButton = (props) => {
       onClick={() => props.planetSelectHandler(props.id)}
     >
       <div className={styles.planetButtonIcon}>
-        <img src={require(`../../../../../assets/images/${props.imgName}`)} />
+        <img
+          src={require(`../../../../../assets/images/${props.imgName}`)}
+          alt={props.planetName}
+        />
       </div>
       <span className={styles.planetName}>{props.planetName}</span>
     </li>

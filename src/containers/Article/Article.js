@@ -110,6 +110,7 @@ class Article extends Component {
             <div className={styles.articleImg}>
               <img
                 src={require(`../../assets/images/${this.props.singleArticle.articleImg}`)}
+                alt=""
               />
             </div>
             <li className={styles.body}>

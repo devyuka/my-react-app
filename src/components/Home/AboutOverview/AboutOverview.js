@@ -16,7 +16,7 @@ const aboutOverview = () => {
         massa.
       </p>
       <div className={styles.aboutImg}>
-        <img src={aboutImg} />
+        <img src={aboutImg} alt="" />
       </div>
       <Button pathName="/about">MORE</Button>
     </section>

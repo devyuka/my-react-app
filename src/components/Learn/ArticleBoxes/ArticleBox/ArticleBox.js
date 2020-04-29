@@ -39,7 +39,10 @@ const articleBox = (props) => {
         }}
       >
         <div className={styles.articleImg}>
-          <img src={require(`../../../../assets/images/${props.imgName}`)} />
+          <img
+            src={require(`../../../../assets/images/${props.imgName}`)}
+            alt=""
+          />
         </div>
         <h3 className={styles.articleTitle}>{props.title}</h3>
         <p className={styles.articleBody}>{props.body}</p>

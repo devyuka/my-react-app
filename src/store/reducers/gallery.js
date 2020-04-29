@@ -45,7 +45,7 @@ const reducer = (state = initialState, action) => {
     case actionTypes.SET_IMAGE_AND_VIDEO:
       const imageData = [];
       const data = action.data;
-      const imageReg = /[\/.](gif|jpg|jpeg|tiff|png)$/i;
+      const imageReg = /[.](gif|jpg|jpeg|tiff|png)$/i;
 
       for (let index in data) {
         if (imageReg.test(data[index].imageData.collection.items[2].href)) {

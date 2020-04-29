@@ -5,18 +5,17 @@ const APIImages = (props) => {
   return (
     <ul className={styles.apiImages}>
       {props.imgData.map((img, index) => (
-        <li key={index}>
-          <a
-            onClick={() => {
-              props.imageDetailHandler({
-                singleImgURL: img.imgURL.href,
-                singleDescription: img.description,
-                singleDateCreated: img.dateCreated,
-              });
-            }}
-          >
-            <img src={img.imgURL.href} />
-          </a>
+        <li
+          key={index}
+          onClick={() => {
+            props.imageDetailHandler({
+              singleImgURL: img.imgURL.href,
+              singleDescription: img.description,
+              singleDateCreated: img.dateCreated,
+            });
+          }}
+        >
+          <img src={img.imgURL.href} alt={img.description} />
         </li>
       ))}
     </ul>
