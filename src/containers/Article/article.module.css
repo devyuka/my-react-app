@@ -92,3 +92,52 @@
   transform: translateX(-50%);
   background: #005495;
 }
+
+@media screen and (max-width: 768px) {
+  .article {
+    margin: 25vw auto;
+    padding: 4vw;
+  }
+
+  .title {
+    font-size: 5vw;
+    margin-bottom: 5vw;
+  }
+
+  .body {
+    margin-bottom: 3vw;
+  }
+
+  .articleImg {
+    width: 100%;
+    margin-bottom: 4vw;
+  }
+
+  .pagination {
+    margin-top: 15vw;
+    margin-bottom: 4vw;
+    font-size: 3.4vw;
+  }
+
+  .next a:after {
+    width: 1.5vw;
+    height: 1.5vw;
+    right: -2vw;
+  }
+
+  .prev a:after {
+    width: 1.5vw;
+    height: 1.5vw;
+    left: -2vw;
+  }
+
+  .seeAllButton a {
+    width: 40vw;
+    font-size: 4vw;
+  }
+
+  .seeAllButton a:after {
+    height: 0.2vw;
+    bottom: -0.5vw;
+  }
+}
