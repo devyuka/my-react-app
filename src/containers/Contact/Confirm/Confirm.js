@@ -16,9 +16,7 @@ class Confirm extends Component {
 
     axios
       .post("/contact.json", data)
-      .then((response) => {
-        console.log(response);
-      })
+      .then((response) => {})
       .catch((error) => {
         console.log(error);
         this.props.postError();
