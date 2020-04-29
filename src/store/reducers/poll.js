@@ -4,6 +4,7 @@ const initialState = {
   chartsRefs: {},
   uniqueKey: null,
   loading: false,
+  error: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -21,6 +22,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
+        error: true,
       };
 
     case actionTypes.SET_CHARTS_REFS:

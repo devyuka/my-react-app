@@ -27,12 +27,6 @@ const reducer = (state = initialState, action) => {
         error: true,
       };
 
-    // case actionTypes.SELECT_ARTICLE:
-    //   return {
-    //     ...state,
-    //     articleId: action.id,
-    //   };
-
     case actionTypes.SET_SINGLE_ARTICLE:
       return {
         ...state,

@@ -6,6 +6,7 @@ const initialState = {
   imgData: [],
   singleImgData: [],
   loading: true,
+  error: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -22,6 +23,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
+        error: true,
       };
 
     case actionTypes.SET_PHOTO:
@@ -37,6 +39,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
+        error: true,
       };
 
     case actionTypes.SET_IMAGE_AND_VIDEO:
@@ -66,6 +69,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
+        error: true,
       };
 
     case actionTypes.LOADING:
