@@ -5,6 +5,7 @@ import * as pollChoices from "./pollChoices";
 import Title from "./../../components/UI/Title/Title";
 import Chart from "./Chart/Chart";
 import styles from "./poll.module.css";
+import Button from "./../../components/UI/Button/Button";
 
 const Poll = (props) => {
   const [tabId, setTabId] = useState(0);
@@ -215,6 +216,11 @@ const Poll = (props) => {
         {nextButton}
       </div>
       {chart}
+
+      <p className={styles.message}>
+        Do you have any fun poll questions ideas?
+      </p>
+      <Button pathName="/contact">Let Us Know</Button>
     </section>
   );
 };
