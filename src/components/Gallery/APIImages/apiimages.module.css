@@ -14,3 +14,15 @@
 .apiImages li a {
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .apiImages {
+    display: block;
+  }
+
+  .apiImages li {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 7vw;
+  }
+}

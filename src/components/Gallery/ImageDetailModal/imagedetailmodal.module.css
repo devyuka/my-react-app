@@ -50,6 +50,7 @@
 .desc {
   display: block;
   width: 100%;
+  word-wrap: break-word;
 }
 
 .close {
@@ -59,4 +60,44 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .detail {
+    width: 90vw;
+    height: 70vh;
+    padding: 16vw 3vw 4vw;
+  }
+
+  .container {
+    padding: 4vw;
+  }
+
+  .date {
+    font-size: 3.4vw;
+  }
+
+  .detailImg {
+    width: 90%;
+    height: auto;
+    margin: 4vw auto;
+  }
+
+  .detailImg img {
+    width: 100%;
+    height: auto;
+  }
+
+  .desc {
+    display: block;
+    width: 100%;
+    font-size: 3.6vw;
+  }
+
+  .close {
+    left: 4vw;
+    top: 4vw;
+    width: 8vw;
+    height: 8vw;
+  }
 }

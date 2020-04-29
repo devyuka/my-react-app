@@ -28,5 +28,17 @@
 }
 
 .subTitle {
-  font-size: 12px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .mainTitle {
+    font-size: 9.4vw;
+    letter-spacing: 0.5vw;
+    margin-bottom: 4vw;
+  }
+
+  .subTitle {
+    font-size: 4vw;
+  }
 }

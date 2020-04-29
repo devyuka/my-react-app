@@ -16,15 +16,17 @@ const Chart = (props) => {
           data={props.data ? props.data : {}}
           options={{
             responsive: true,
+            maintainAspectRatio: false,
             legend: {
               labels: {
+                fontSize: 11,
                 fontColor: "#fff",
               },
             },
             title: {
               display: true,
               fontColor: "#fff",
-              fontSize: 24,
+              fontSize: 20,
               text: "Do you think ther is extraterrestrial life?",
             },
             scales: {
@@ -55,15 +57,17 @@ const Chart = (props) => {
           data={props.data ? props.data : {}}
           options={{
             responsive: true,
+            maintainAspectRatio: false,
             legend: {
               labels: {
+                fontSize: 11,
                 fontColor: "#fff",
               },
             },
             title: {
               display: true,
               fontColor: "#fff",
-              fontSize: 24,
+              fontSize: 20,
               text: "How much would you pay for space tourism?",
             },
             scales: {
@@ -99,15 +103,17 @@ const Chart = (props) => {
           data={props.data ? props.data : {}}
           options={{
             responsive: true,
+            maintainAspectRatio: false,
             legend: {
               labels: {
+                fontSize: 11,
                 fontColor: "#fff",
               },
             },
             title: {
               display: true,
               fontColor: "#fff",
-              fontSize: 24,
+              fontSize: 20,
               text: "What planet would you want to travel to?",
             },
             scales: {

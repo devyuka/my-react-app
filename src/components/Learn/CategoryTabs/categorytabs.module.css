@@ -4,3 +4,11 @@
   align-self: center;
   margin: 100px 0 50px;
 }
+
+@media screen and (max-width: 768px) {
+  .categoryTabs {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10vw 0 5vw;
+  }
+}

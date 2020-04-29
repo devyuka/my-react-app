@@ -5,7 +5,6 @@
  * COMMON
  *
  **********************************/
-
 * {
   box-sizing: border-box;
 }
@@ -45,7 +44,6 @@ a:link {
  * body
  *
  **********************************/
-
 body {
   position: relative;
   width: 100%;
@@ -66,4 +64,21 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@media screen and (max-width: 768px) {
+  /**********************************
+ *
+ * body
+ *
+ **********************************/
+  body {
+    font-size: 4vw;
+    line-height: 1.46;
+    letter-spacing: 1.2px;
+  }
+
+  .App {
+    font-size: 4vw;
+  }
 }

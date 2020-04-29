@@ -29,3 +29,25 @@
   height: 40px;
   outline: none;
 }
+
+@media screen and (max-width: 768px) {
+  .box {
+    margin-bottom: 2vw;
+  }
+
+  .box span {
+    margin: 0 2vw;
+  }
+
+  .txt {
+    font-size: 4vw;
+  }
+
+  .picker input {
+    padding: 2vw;
+    border-radius: 1.5vw;
+    font-size: 5vw;
+    width: 35vw;
+    height: 12vw;
+  }
+}

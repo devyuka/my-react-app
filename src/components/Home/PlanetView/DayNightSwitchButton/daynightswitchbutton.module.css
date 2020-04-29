@@ -39,3 +39,9 @@
   transform: translateX(-100%);
   transition: all 0.15s linear;
 }
+
+@media screen and (max-width: 768px) {
+  .dayNightSwitchButton {
+    font-size: 2.7vw;
+  }
+}

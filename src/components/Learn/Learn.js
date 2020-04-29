@@ -16,11 +16,6 @@ const Learn = () => {
         ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet,
         consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
         massa.
-        <br />
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-        ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet,
-        consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
-        massa.
       </p>
       <ArticleContainer />
     </section>

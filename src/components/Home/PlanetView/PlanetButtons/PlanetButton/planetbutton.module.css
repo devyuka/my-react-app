@@ -37,3 +37,24 @@
   color: #ffdc6e;
   transition: all ease 0.3s;
 }
+
+@media screen and (max-width: 768px) {
+  .planetButton {
+    margin: 0 10px;
+  }
+
+  .planetButtonIcon {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .planetButtonIcon img {
+    width: 14vw;
+    height: 14vw;
+  }
+
+  .planetName {
+    font-size: 3.3vw;
+    margin: 1.5vw 0 3vw;
+  }
+}

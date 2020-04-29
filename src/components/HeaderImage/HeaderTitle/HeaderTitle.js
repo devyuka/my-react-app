@@ -14,7 +14,7 @@ const headerTitle = (props) => {
             <br />
             THE UNIVERSE
           </h1>
-          <p className={styles.subTitl}>
+          <p className={styles.subTitle}>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
             <br />
             Aenean commodo ligula eget dolor. Aenean massa. <br />

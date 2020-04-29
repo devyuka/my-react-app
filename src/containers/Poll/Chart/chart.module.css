@@ -7,6 +7,7 @@
 
 .chartBox {
   width: 100%;
+  min-height: 300px;
 }
 
 .inputBox {
@@ -37,4 +38,34 @@
   background-color: #6a6a6a;
   color: #b9b9b9;
   cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+  .chart {
+    width: 100%;
+    margin-bottom: 15vw;
+  }
+
+  .chartBox {
+    min-height: 35vh;
+  }
+
+  .inputBox {
+    margin-bottom: 3vw;
+    font-size: 4vw;
+  }
+
+  .msg {
+    margin: 10vw 0 2vw;
+    font-size: 5vw;
+  }
+
+  .voteButton {
+    letter-spacing: 1vw;
+    width: 30vw;
+    padding: 2.2vw;
+    font-size: 6vw;
+    margin: 5vw auto;
+    display: block;
+  }
 }

@@ -6,3 +6,13 @@
   text-align: center;
   margin-bottom: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .outline {
+    margin-bottom: 15vw;
+  }
+
+  .message {
+    margin-bottom: 5vw;
+  }
+}

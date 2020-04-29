@@ -10,3 +10,14 @@
   opacity: 0.4;
   z-index: -1;
 }
+
+@media screen and (max-width: 768px) {
+  .outline {
+    margin-bottom: 10vw;
+  }
+
+  .aboutImg {
+    top: 12%;
+    width: 75%;
+  }
+}

@@ -1,6 +1,7 @@
 .learnOverview {
   color: #0e0e0e;
 }
+
 .learnOverview:before {
   content: "";
   display: block;
@@ -45,4 +46,10 @@
 
 .stripe5 {
   left: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .outline {
+    margin-bottom: 5vw;
+  }
 }

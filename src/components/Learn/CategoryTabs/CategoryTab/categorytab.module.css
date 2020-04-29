@@ -44,3 +44,13 @@
   border: 1px solid #ad62aa;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .categoryTab {
+    margin: 3vw 0;
+    font-size: 4.2vw;
+    width: 41vw;
+    border-radius: 1vw;
+    padding: 2vw 0;
+  }
+}

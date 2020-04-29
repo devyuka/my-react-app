@@ -220,7 +220,7 @@ const Poll = (props) => {
       <p className={styles.message}>
         Do you have any fun poll questions ideas?
       </p>
-      <Button pathName="/contact">Let Us Know</Button>
+      <Button pathName="/contact">Let Us Know!</Button>
     </section>
   );
 };

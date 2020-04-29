@@ -15,10 +15,6 @@ const headerImage = (props) => {
     case "/":
       keyImg = (
         <React.Fragment>
-          <video loop autoPlay muted className={styles.video}>
-            <source src={keyVideo01} type="video/mp4" />
-            <source src={keyVideo02} type="video/webm" />
-          </video>
           <div className={styles.keyImg}>
             <img src={keyImgHome} />
           </div>
@@ -27,21 +23,21 @@ const headerImage = (props) => {
       break;
     case "/about":
       keyImg = (
-        <div>
+        <div className={styles.keyImg}>
           <img src={keyImgAbout} />
         </div>
       );
       break;
     case "/learn":
       keyImg = (
-        <div>
+        <div className={styles.keyImg}>
           <img src={keyImgLearn} />
         </div>
       );
       break;
     case "/gallery":
       keyImg = (
-        <div>
+        <div className={styles.keyImg}>
           <img src={keyImgGallery} />
         </div>
       );
@@ -53,6 +49,10 @@ const headerImage = (props) => {
   return (
     <div className={styles.headerImage}>
       <div className={styles.headerImageInner}>
+        <video loop autoPlay muted className={styles.video}>
+          <source src={keyVideo01} type="video/mp4" />
+          <source src={keyVideo02} type="video/webm" />
+        </video>
         {keyImg}
         <HeaderTitle pathName={props.pathName} />
       </div>

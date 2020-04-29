@@ -15,8 +15,8 @@
 .keyImg {
   opacity: 0;
   animation-name: fade01;
-  animation-duration: 4s;
   animation-delay: 1s;
+  animation-duration: 4s;
   animation-fill-mode: forwards;
 }
 
@@ -53,5 +53,22 @@
   100% {
     opacity: 1;
     filter: opacity(60%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headerImage {
+    margin-bottom: 10vw;
+  }
+
+  .keyImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerImage img {
+    width: auto;
+    height: 100vh;
   }
 }

@@ -13,3 +13,14 @@
 :global .active {
   color: #737373 !important;
 }
+
+@media screen and (max-width: 768px) {
+  .navigationItem a {
+    margin: 2vw;
+    font-size: 3.4vw;
+  }
+
+  .navigationItem a:hover {
+    transform: translateY(0);
+  }
+}

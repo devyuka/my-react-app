@@ -4,3 +4,11 @@
   letter-spacing: 6px;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 5.4vw;
+    letter-spacing: 1vw;
+    margin-bottom: 3.5vw;
+  }
+}

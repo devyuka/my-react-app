@@ -45,3 +45,36 @@
   background-size: 50%;
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+
+@media screen and (max-width: 768px) {
+  .box {
+    margin-bottom: 10vw;
+  }
+
+  .box span {
+    margin: 0 2vw;
+  }
+
+  .txt {
+    font-size: 4vw;
+  }
+
+  .searchInput {
+    padding: 2vw 4vw;
+    border-radius: 1vw 0 0 1vw;
+    font-size: 6vw;
+    width: 60vw;
+    height: 16vw;
+  }
+
+  .searchButton {
+    width: 16vw;
+    height: 16vw;
+    background-size: 60%;
+  }
+
+  .searchButton:active {
+    background-size: 50%;
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+}

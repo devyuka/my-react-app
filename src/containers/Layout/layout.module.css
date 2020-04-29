@@ -4,8 +4,28 @@
   margin: 0 auto;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 main section {
   margin-bottom: 80px;
   padding: 50px;
   position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .inner {
+    width: 88%;
+  }
+
+  main {
+    margin-bottom: 10vw;
+    min-height: calc(85vh - 10vw);
+  }
+
+  main section {
+    margin-bottom: 6.125vw;
+    padding: 10vw 0;
+  }
 }

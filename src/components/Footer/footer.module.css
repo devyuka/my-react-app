@@ -12,3 +12,16 @@
   margin: 20px;
   font-size: 12px;
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 0 6vw;
+    height: 15vh;
+  }
+
+  .copyright {
+    font-size: 3vw;
+    margin: 0;
+    padding: 0 5vw;
+  }
+}

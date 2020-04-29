@@ -14,3 +14,16 @@
   margin-bottom: 50px;
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .title {
+    margin-bottom: 2vw;
+    font-size: 7vw;
+    letter-spacing: 0.7vw;
+  }
+
+  .text {
+    font-size: 3.6vw;
+    margin-bottom: 2vw;
+  }
+}

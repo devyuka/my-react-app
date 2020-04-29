@@ -18,7 +18,6 @@
 .box .txt {
   font-size: 12px;
   text-align: left;
-  text-align: left;
   line-height: 1.8;
 }
 
@@ -32,4 +31,38 @@
 
 .box img {
   height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: 100%;
+    padding: 5vw 0;
+    display: block;
+  }
+
+  .box .desc {
+    width: 100%;
+    margin: 0;
+  }
+
+  .box .title {
+    margin-bottom: 2vw;
+    font-size: 4.5vw;
+  }
+
+  .box .txt {
+    font-size: 3.4vw;
+  }
+
+  .box .image {
+    width: 100%;
+    max-height: none;
+    margin: 0;
+    margin-bottom: 6vw;
+  }
+
+  .box img {
+    height: auto;
+    width: 100%;
+  }
 }

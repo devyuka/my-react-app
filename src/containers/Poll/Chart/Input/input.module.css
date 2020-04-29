@@ -12,3 +12,14 @@
 .inputWrapper input:checked + label {
   color: #ff7c72;
 }
+
+@media screen and (max-width: 768px) {
+  .inputWrapper {
+    margin: 2vw 0;
+    font-size: 3.8vw;
+  }
+
+  .inputWrapper input {
+    margin-right: 4vw;
+  }
+}
