@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styles from "./planetview.module.css";
 import planetData from "../../data/planetview-data";
 import Title from "./../../components/UI/Title/Title";
@@ -39,11 +40,21 @@ class PlaneView extends Component {
           selectedPlanetId={this.state.selectedPlanetId}
           planetSelectHandler={this.planetSelectHandler}
         />
+
         <div className={styles.planetImageWrapper}>
-          <PlanetImage
-            selectedPlanetId={this.state.selectedPlanetId}
-            dayNightSwitch={this.state.dayNightSwitch}
-          />
+          <TransitionGroup>
+            <CSSTransition
+              key={this.state.selectedPlanetId}
+              timeout={600}
+              classNames="fade"
+            >
+              <PlanetImage
+                selectedPlanetId={this.state.selectedPlanetId}
+                dayNightSwitch={this.state.dayNightSwitch}
+              />
+            </CSSTransition>
+          </TransitionGroup>
+
           <DayNightSwitchButton
             dayNightSwitch={this.state.dayNightSwitch}
             dayNightSwitchHandler={this.dayNightSwitchHandler}

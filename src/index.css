@@ -39,6 +39,31 @@ a:link {
   background: rgb(49, 163, 255);
 }
 
+/*enter*/
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  transition-delay: 0.3s;
+}
+
+/*exit*/
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fade-exit-done {
+  opacity: 0;
+}
+
 /**********************************
  *
  * body
