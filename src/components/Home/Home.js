@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Fade from "react-reveal/Fade";
 import AboutOverview from "./AboutOverview/AboutOverview";
 import LearnOverview from "./LearnOverview/LearnOverview";
 import PlaneView from "../../containers/PlanetView/PlanetView";
@@ -11,10 +12,12 @@ const Home = () => {
 
   return (
     <React.Fragment>
-      <AboutOverview />
-      <LearnOverview />
-      <PlaneView />
-      <Poll />
+      <Fade duration={2000}>
+        <AboutOverview />
+        <LearnOverview />
+        <PlaneView />
+        <Poll />
+      </Fade>
     </React.Fragment>
   );
 };

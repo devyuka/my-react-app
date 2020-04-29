@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../store/actions";
 import { NavLink } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 import styles from "./article.module.css";
 import stylesArticleBox from "../../components/Learn/ArticleBoxes/ArticleBox/articlebox.module.css";
 
@@ -101,24 +102,26 @@ class Article extends Component {
 
       article = (
         <React.Fragment>
-          <ul>
-            <li>
-              <h3 className={styles.title}>
-                {this.props.singleArticle.articleTitle}
-              </h3>
-            </li>
-            <div className={styles.articleImg}>
-              <img
-                src={require(`../../assets/images/${this.props.singleArticle.articleImg}`)}
-                alt=""
-              />
-            </div>
-            <li className={styles.body}>
-              {this.props.singleArticle.articleBody}
-            </li>
-            <li className={classNameLabel.join(" ")}>{category}</li>
-          </ul>
-          {pagination}
+          <Fade duration={700}>
+            <ul>
+              <li>
+                <h3 className={styles.title}>
+                  {this.props.singleArticle.articleTitle}
+                </h3>
+              </li>
+              <div className={styles.articleImg}>
+                <img
+                  src={require(`../../assets/images/${this.props.singleArticle.articleImg}`)}
+                  alt=""
+                />
+              </div>
+              <li className={styles.body}>
+                {this.props.singleArticle.articleBody}
+              </li>
+              <li className={classNameLabel.join(" ")}>{category}</li>
+            </ul>
+            {pagination}
+          </Fade>
         </React.Fragment>
       );
     }

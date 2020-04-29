@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Fade from "react-reveal/Fade";
 import styles from "./contact.module.css";
 import ContactFormDetails from "./ContactFormDetails/ContactFormDetails";
 import Confirm from "./Confirm/Confirm";
@@ -134,16 +135,18 @@ class Contact extends Component {
     switch (step) {
       case 1:
         return (
-          <section className={styles.contact}>
-            <div className={styles.contactForm}>
-              <ContactFormDetails
-                nextStep={this.nextStep}
-                inputChangeHandler={this.inputChangeHandler}
-                contactFormValues={contactFormValues}
-                isFormValid={isFormValid}
-              />
-            </div>
-          </section>
+          <Fade duration={700}>
+            <section className={styles.contact}>
+              <div className={styles.contactForm}>
+                <ContactFormDetails
+                  nextStep={this.nextStep}
+                  inputChangeHandler={this.inputChangeHandler}
+                  contactFormValues={contactFormValues}
+                  isFormValid={isFormValid}
+                />
+              </div>
+            </section>
+          </Fade>
         );
       case 2:
         return (

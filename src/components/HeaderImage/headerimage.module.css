@@ -15,7 +15,7 @@
 .keyImg {
   opacity: 0;
   animation-name: fade01;
-  animation-delay: 1s;
+  animation-delay: 0.2s;
   animation-duration: 4s;
   animation-fill-mode: forwards;
 }

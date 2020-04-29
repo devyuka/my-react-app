@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../store/actions";
+import Fade from "react-reveal/Fade";
 import styles from "./gallery.module.css";
 import Title from "./../../components/UI/Title/Title";
 import DateInput from "../../components/Gallery/DateInput/DateInput";
@@ -62,38 +63,40 @@ class Gallery extends Component {
 
     return (
       <React.Fragment>
-        <section>
-          <Title>Astronomy Picture of the Day</Title>
+        <Fade duration={2000}>
+          <section>
+            <Title>Astronomy Picture of the Day</Title>
 
-          <p className={styles.outline}>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-            Aenean massa.
-          </p>
-          <DateInput
-            onChangeDate={this.props.onChangeDate}
-            date={this.props.date}
-          />
-          {picOfDay}
-        </section>
+            <p className={styles.outline}>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit
+              amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+              dolor. Aenean massa.
+            </p>
+            <DateInput
+              onChangeDate={this.props.onChangeDate}
+              date={this.props.date}
+            />
+            {picOfDay}
+          </section>
 
-        <section>
-          <Title>See fantastic photos from NASA</Title>
-          <p className={styles.outline}>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-            Aenean massa....
-          </p>
-          <SearchInput
-            inputChangeHandler={this.inputChangeHandler}
-            imageSearchHandler={this.imageSearchHandler}
-            term={this.state.term}
-          />
-          {apiImages}
-          {imageDetail}
-        </section>
+          <section>
+            <Title>See fantastic photos from NASA</Title>
+            <p className={styles.outline}>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit
+              amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+              dolor. Aenean massa....
+            </p>
+            <SearchInput
+              inputChangeHandler={this.inputChangeHandler}
+              imageSearchHandler={this.imageSearchHandler}
+              term={this.state.term}
+            />
+            {apiImages}
+            {imageDetail}
+          </section>
+        </Fade>
       </React.Fragment>
     );
   }
