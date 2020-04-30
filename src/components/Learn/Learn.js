@@ -19,8 +19,8 @@ const Learn = () => {
           consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
           massa.
         </p>
-        <ArticleContainer />
       </Fade>
+      <ArticleContainer />
     </section>
   );
 };

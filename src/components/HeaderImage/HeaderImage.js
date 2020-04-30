@@ -46,15 +46,22 @@ const headerImage = (props) => {
       keyImg = null;
   }
 
+  let video = null;
+  if (!props.isResponsive) {
+    video = (
+      <video loop autoPlay muted className={styles.video}>
+        <source src={keyVideo01} type="video/mp4" />
+        <source src={keyVideo02} type="video/webm" />
+      </video>
+    );
+  }
+
   return (
     <div className={styles.headerImage}>
       <TransitionGroup>
         <CSSTransition key={props.pathName} timeout={800} classNames="fade">
           <div className={styles.headerImageInner}>
-            <video loop autoPlay muted className={styles.video}>
-              <source src={keyVideo01} type="video/mp4" />
-              <source src={keyVideo02} type="video/webm" />
-            </video>
+            {video}
             {keyImg}
             <HeaderTitle pathName={props.pathName} />
           </div>

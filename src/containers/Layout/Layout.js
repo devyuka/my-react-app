@@ -14,6 +14,8 @@ class Layout extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
 
     this.props.history.listen((location, action) => {
       this.setState({ pathName: location.pathname });
@@ -21,6 +23,13 @@ class Layout extends Component {
     });
 
     this.setState({ pathName: this.props.history.location.pathname });
+  }
+
+  resize() {
+    let isResponsive = window.innerWidth <= 768;
+    if (isResponsive !== this.state.isResponsive) {
+      this.setState({ isResponsive: isResponsive });
+    }
   }
 
   handleScroll = () => {
@@ -44,7 +53,10 @@ class Layout extends Component {
     let headerImage =
       this.state.pathName !== "/contact" &&
       this.state.pathName !== "/article" ? (
-        <HeaderImage pathName={this.state.pathName} />
+        <HeaderImage
+          pathName={this.state.pathName}
+          isResponsive={this.state.isResponsive}
+        />
       ) : null;
 
     return (

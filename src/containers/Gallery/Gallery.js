@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../store/actions";
 import Fade from "react-reveal/Fade";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 import styles from "./gallery.module.css";
 import Title from "./../../components/UI/Title/Title";
 import DateInput from "../../components/Gallery/DateInput/DateInput";
@@ -16,10 +21,19 @@ class Gallery extends Component {
     term: "moon",
     modalShow: false,
   };
+
+  targetRef = React.createRef();
+  targetElement = null;
+
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.onInitTodayPhoto();
     this.props.oninitImageAndVideo("moon");
+    // if (this.state.modalShow) {
+    //   document.body.style.overflowY = "hidden";
+    // }
+    this.targetElement = document.body;
+    console.log(this.targetElement);
   }
 
   inputChangeHandler = (e) => {
@@ -32,11 +46,29 @@ class Gallery extends Component {
 
   imageDetailHandler = (data) => {
     this.props.onShowImageDetail(data);
-    this.setState({ modalShow: true });
+    this.setState(
+      {
+        modalShow: true,
+      },
+      () => {
+        // document.body.style.height = "100vh";
+        // document.body.style.overflowY = "hidden";
+        disableBodyScroll(this.targetElement);
+      }
+    );
   };
 
   modalCloseHandler = () => {
-    this.setState({ modalShow: false });
+    this.setState(
+      {
+        modalShow: false,
+      },
+      () => {
+        // document.body.style.height = "auto";
+        // document.body.style.overflowY = "unset";
+        enableBodyScroll(this.targetElement);
+      }
+    );
   };
 
   render() {
@@ -79,24 +111,24 @@ class Gallery extends Component {
             />
             {picOfDay}
           </section>
-
-          <section>
-            <Title>See fantastic photos from NASA</Title>
-            <p className={styles.outline}>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit
-              amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-              dolor. Aenean massa....
-            </p>
-            <SearchInput
-              inputChangeHandler={this.inputChangeHandler}
-              imageSearchHandler={this.imageSearchHandler}
-              term={this.state.term}
-            />
-            {apiImages}
-            {imageDetail}
-          </section>
         </Fade>
+
+        <section>
+          <Title>See fantastic photos from NASA</Title>
+          <p className={styles.outline}>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa....
+          </p>
+          <SearchInput
+            inputChangeHandler={this.inputChangeHandler}
+            imageSearchHandler={this.imageSearchHandler}
+            term={this.state.term}
+          />
+          {apiImages}
+          {imageDetail}
+        </section>
       </React.Fragment>
     );
   }

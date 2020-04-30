@@ -1,6 +1,7 @@
 {
   "name": "my-universe",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.11",
@@ -9,6 +10,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
+    "body-scroll-lock": "^3.0.2",
     "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
     "date-fns": "^2.12.0",

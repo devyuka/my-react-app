@@ -6,7 +6,6 @@ const SearchInput = (props) => {
     <div className={styles.box}>
       <input
         type="text"
-        autoFocus="autofocus"
         onChange={props.inputChangeHandler}
         value={props.term}
         className={styles.searchInput}
