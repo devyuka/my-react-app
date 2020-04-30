@@ -28,21 +28,21 @@ class Article extends Component {
     if (this.props.singleArticle !== null) {
       switch (this.props.singleArticle.articleCategory) {
         case 1:
-          category = "CAT01";
+          category = "Planets";
           classNameLabel = [
             stylesArticleBox.categoryLabel,
             stylesArticleBox.categoryLabel01,
           ];
           break;
         case 2:
-          category = "CAT02";
+          category = "Solar System";
           classNameLabel = [
             stylesArticleBox.categoryLabel,
             stylesArticleBox.categoryLabel02,
           ];
           break;
         case 3:
-          category = "CAT03";
+          category = "Galaxy";
           classNameLabel = [
             stylesArticleBox.categoryLabel,
             stylesArticleBox.categoryLabel03,

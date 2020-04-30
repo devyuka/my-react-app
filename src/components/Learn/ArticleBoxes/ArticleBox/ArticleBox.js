@@ -7,15 +7,15 @@ const articleBox = (props) => {
   let classNameLabel = [styles.categoryLabel];
   switch (props.category) {
     case 1:
-      category = "CAT01";
+      category = "Planets";
       classNameLabel = [styles.categoryLabel, styles.categoryLabel01];
       break;
     case 2:
-      category = "CAT02";
+      category = "Solar System";
       classNameLabel = [styles.categoryLabel, styles.categoryLabel02];
       break;
     case 3:
-      category = "CAT03";
+      category = "Galaxy";
       classNameLabel = [styles.categoryLabel, styles.categoryLabel03];
       break;
     default:

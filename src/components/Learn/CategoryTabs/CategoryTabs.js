@@ -17,21 +17,21 @@ const categoryTabs = (props) => {
         selectCategoryHandler={props.selectCategoryHandler}
         selectedCategoryId={props.selectedCategoryId}
       >
-        CAT01
+        Planets
       </CategoryTab>
       <CategoryTab
         categoryId={2}
         selectCategoryHandler={props.selectCategoryHandler}
         selectedCategoryId={props.selectedCategoryId}
       >
-        CAT02
+        Solar System
       </CategoryTab>
       <CategoryTab
         categoryId={3}
         selectCategoryHandler={props.selectCategoryHandler}
         selectedCategoryId={props.selectedCategoryId}
       >
-        CAT03
+        Galaxy
       </CategoryTab>
     </ul>
   );
