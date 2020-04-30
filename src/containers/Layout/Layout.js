@@ -67,7 +67,7 @@ class Layout extends Component {
           <div className={styles.inner}>{this.props.children}</div>
         </main>
         <Footer />
-        <SocialMedia />
+        {/* <SocialMedia /> */}
       </div>
     );
   }
