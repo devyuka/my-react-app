@@ -1,10 +1,3 @@
-// import MoonImg from "../assets/images/moon.png";
-// import MercuryImg from "../assets/images/mercury.png";
-// import VenusImg from "../assets/images/venus.jpg";
-// import MarsImg from "../assets/images/mars.jpg";
-// import JupiterImg from "../assets/images/jupiter.png";
-// import SaturnImg from "../assets/images/saturn.png";
-
 const planetDdata = {
   planetProperties: [
     {
@@ -20,13 +13,13 @@ const planetDdata = {
     {
       id: 2,
       planetName: "Venus",
-      imgName: "venus.jpg",
+      imgName: "venus.png",
     },
 
     {
       id: 3,
       planetName: "Mars",
-      imgName: "mars.jpg",
+      imgName: "mars.png",
     },
     {
       id: 4,

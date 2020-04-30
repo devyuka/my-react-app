@@ -13,7 +13,7 @@ class PlaneView extends Component {
     planetProperties: planetData.planetProperties,
     planetProperty: planetData.planetProperties[0],
     selectedPlanetId: 0,
-    dayNightSwitch: true,
+    dayNightSwitch: false,
   };
 
   planetSelectHandler = (id) => {
@@ -55,10 +55,10 @@ class PlaneView extends Component {
             </CSSTransition>
           </TransitionGroup>
 
-          <DayNightSwitchButton
+          {/* <DayNightSwitchButton
             dayNightSwitch={this.state.dayNightSwitch}
             dayNightSwitchHandler={this.dayNightSwitchHandler}
-          />
+          /> */}
         </div>
 
         <p className={styles.message}>Wanna see "real" photos from NASA?</p>
