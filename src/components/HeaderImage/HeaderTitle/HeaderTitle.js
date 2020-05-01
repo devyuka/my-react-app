@@ -53,10 +53,10 @@ const headerTitle = (props) => {
         <React.Fragment>
           <h1 className={className.join(" ")}>
             <div className={styles.txtBox}>
-              <span className={styles.txt}>DIVE INTO</span>
+              <span className={styles.txt}>MYSTERIES OF</span>
             </div>
             <div className={styles.txtBox}>
-              <span className={styles.txt}>THE MYSTERY OF UNIVERSE</span>
+              <span className={styles.txt}>THE UNIVERSE</span>
             </div>
           </h1>
           <p className={styles.subTitle}>
