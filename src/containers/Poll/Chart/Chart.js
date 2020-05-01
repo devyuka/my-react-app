@@ -59,10 +59,7 @@ const Chart = (props) => {
             responsive: true,
             maintainAspectRatio: false,
             legend: {
-              labels: {
-                fontSize: 11,
-                fontColor: "#fff",
-              },
+              display: false,
             },
             title: {
               display: true,
