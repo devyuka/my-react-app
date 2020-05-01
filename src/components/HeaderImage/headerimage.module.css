@@ -20,6 +20,10 @@
   animation-fill-mode: forwards;
 }
 
+.homeKeyImg {
+  animation-delay: 1s;
+}
+
 .video {
   opacity: 0;
   filter: opacity(100%);

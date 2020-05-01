@@ -13,9 +13,10 @@ const headerImage = (props) => {
   let keyImg = null;
   switch (props.pathName) {
     case "/":
+      const classNames = [styles.keyImg, styles.homeKeyImg];
       keyImg = (
         <React.Fragment>
-          <div className={styles.keyImg}>
+          <div className={classNames.join(" ")}>
             <img src={keyImgHome} alt="" />
           </div>
         </React.Fragment>

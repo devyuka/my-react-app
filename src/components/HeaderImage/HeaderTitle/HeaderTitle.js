@@ -10,9 +10,12 @@ const headerTitle = (props) => {
       keyTitle = (
         <React.Fragment>
           <h1 className={className.join(" ")}>
-            EXPLORE
-            <br />
-            THE UNIVERSE
+            <div className={styles.txtBox}>
+              <span className={styles.txt}>EXPLORE</span>
+            </div>
+            <div className={styles.txtBox}>
+              <span className={styles.txt}>THE UNIVERSE</span>
+            </div>
           </h1>
           <p className={styles.subTitle}>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -28,11 +31,14 @@ const headerTitle = (props) => {
       keyTitle = (
         <React.Fragment>
           <h1 className={className.join(" ")}>
-            WHO WE ARE
-            <br />
-            &amp; WHAT WE DO
+            <div className={styles.txtBox}>
+              <span className={styles.txt}>WHO WE ARE</span>
+            </div>
+            <div className={styles.txtBox}>
+              <span className={styles.txt}>&amp; WHAT WE DO</span>
+            </div>
           </h1>
-          <p className={styles.subTitl}>
+          <p className={styles.subTitle}>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
             <br />
             Aenean commodo ligula eget dolor. Aenean massa. <br />
@@ -46,11 +52,14 @@ const headerTitle = (props) => {
       keyTitle = (
         <React.Fragment>
           <h1 className={className.join(" ")}>
-            DIVE INTO
-            <br />
-            THE MYSTERY OF UNIVERSE
+            <div className={styles.txtBox}>
+              <span className={styles.txt}>DIVE INTO</span>
+            </div>
+            <div className={styles.txtBox}>
+              <span className={styles.txt}>THE MYSTERY OF UNIVERSE</span>
+            </div>
           </h1>
-          <p className={styles.subTitl}>
+          <p className={styles.subTitle}>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
             <br />
             Aenean commodo ligula eget dolor. Aenean massa. <br />
@@ -64,11 +73,14 @@ const headerTitle = (props) => {
       keyTitle = (
         <React.Fragment>
           <h1 className={className.join(" ")}>
-            SEE THE OUTER WORLD
-            <br />
-            FROM SPACE
+            <div className={styles.txtBox}>
+              <span className={styles.txt}>SEE THE WORLD</span>
+            </div>
+            <div className={styles.txtBox}>
+              <span className={styles.txt}>FROM SPACE</span>
+            </div>
           </h1>
-          <p className={styles.subTitl}>
+          <p className={styles.subTitle}>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
             <br />
             Aenean commodo ligula eget dolor. Aenean massa. <br />
