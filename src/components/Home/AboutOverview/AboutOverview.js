@@ -10,10 +10,10 @@ const aboutOverview = () => {
     <section>
       <Title>About</Title>
       <p className={styles.outline}>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-        ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet,
-        consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
-        massa.
+        This is a website that provides educational and fun content about the
+        universe.
+        <br />
+        Hope you enjoy browsing through the site and find the content helpful.
       </p>
       <div className={styles.aboutImg}>
         <img src={aboutImg} alt="" />

@@ -18,10 +18,12 @@ const headerTitle = (props) => {
             </div>
           </h1>
           <p className={styles.subTitle}>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            There is so much in the universe that is astonishing and intriguing.
             <br />
-            Aenean commodo ligula eget dolor. Aenean massa. <br />
-            Fefwoe commodo ligula eget dolor
+            Are you fascinated with the stunning beauty of galaxy or mysteries
+            of planets?
+            <br />
+            You've come to the right place!
           </p>
         </React.Fragment>
       );
@@ -32,17 +34,17 @@ const headerTitle = (props) => {
         <React.Fragment>
           <h1 className={className.join(" ")}>
             <div className={styles.txtBox}>
-              <span className={styles.txt}>WHO WE ARE</span>
+              <span className={styles.txt}>ABOUT</span>
             </div>
             <div className={styles.txtBox}>
-              <span className={styles.txt}>&amp; WHAT WE DO</span>
+              <span className={styles.txt}>MY UNIVERSE</span>
             </div>
           </h1>
           <p className={styles.subTitle}>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            This website offers fascinating content that is all about the
+            universe.
             <br />
-            Aenean commodo ligula eget dolor. Aenean massa. <br />
-            Fefwoe commodo ligula eget dolor
+            Yes we are just as fascinated with space as you are.
           </p>
         </React.Fragment>
       );
@@ -60,10 +62,10 @@ const headerTitle = (props) => {
             </div>
           </h1>
           <p className={styles.subTitle}>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            The universe is full of mysteries and wonders.
             <br />
-            Aenean commodo ligula eget dolor. Aenean massa. <br />
-            Fefwoe commodo ligula eget dolor
+            Why don't you take a deep dive into <br />
+            our strange yet exciting astronomical world.
           </p>
         </React.Fragment>
       );
@@ -81,10 +83,9 @@ const headerTitle = (props) => {
             </div>
           </h1>
           <p className={styles.subTitle}>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            Take a look at stunning photos provided by NASA.
             <br />
-            Aenean commodo ligula eget dolor. Aenean massa. <br />
-            Fefwoe commodo ligula eget dolor
+            You would feel how small we are in this universe.
           </p>
         </React.Fragment>
       );

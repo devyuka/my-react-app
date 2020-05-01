@@ -25,11 +25,7 @@ class Gallery extends Component {
     window.scrollTo(0, 0);
     this.props.onInitTodayPhoto();
     this.props.oninitImageAndVideo("moon");
-    // if (this.state.modalShow) {
-    //   document.body.style.overflowY = "hidden";
-    // }
     this.targetElement = document.body;
-    console.log(this.targetElement);
   }
 
   inputChangeHandler = (e) => {
@@ -47,8 +43,6 @@ class Gallery extends Component {
         modalShow: true,
       },
       () => {
-        // document.body.style.height = "100vh";
-        // document.body.style.overflowY = "hidden";
         disableBodyScroll(this.targetElement);
       }
     );
@@ -60,8 +54,6 @@ class Gallery extends Component {
         modalShow: false,
       },
       () => {
-        // document.body.style.height = "auto";
-        // document.body.style.overflowY = "unset";
         enableBodyScroll(this.targetElement);
       }
     );
@@ -96,10 +88,9 @@ class Gallery extends Component {
             <Title>Astronomy Picture of the Day</Title>
 
             <p className={styles.outline}>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit
-              amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-              dolor. Aenean massa.
+              NASA provides a different image or photograph of our fascinating
+              universe everyday, along with a brief explanation written by a
+              professional astronomer.
             </p>
             <DateInput
               onChangeDate={this.props.onChangeDate}
@@ -112,10 +103,8 @@ class Gallery extends Component {
         <section>
           <Title>See fantastic photos from NASA</Title>
           <p className={styles.outline}>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-            Aenean massa....
+            Do you want to access to more images collected by NASA?
+            <br /> Go ahead and search whatever photos you are looking for.
           </p>
           <SearchInput
             inputChangeHandler={this.inputChangeHandler}

@@ -208,7 +208,8 @@ const Poll = (props) => {
     <section>
       <Title>Online Polls</Title>
       <p className={styles.outline}>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Feel free to vote and let us know your choice. <br />
+        There're three polls in total that are all about the universe.
       </p>
 
       <div className={styles.buttonsBox}>

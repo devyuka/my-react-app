@@ -23,14 +23,14 @@
   display: block;
   transform: translateY(50px);
   animation-name: slide;
-  animation-delay: 1s;
-  animation-duration: 1.5s;
+  animation-delay: 1.2s;
+  animation-duration: 1.8s;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   animation-fill-mode: forwards;
 }
 
 .txtBox:nth-child(2) .txt {
-  animation-delay: 1.3s;
+  animation-delay: 1.5s;
 }
 
 @keyframes slide {
@@ -59,7 +59,7 @@
   font-size: 20px;
   opacity: 0;
   animation-name: fade;
-  animation-delay: 1.5s;
+  animation-delay: 2s;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;

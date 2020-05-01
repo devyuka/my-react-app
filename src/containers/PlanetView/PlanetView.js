@@ -30,10 +30,10 @@ class PlaneView extends Component {
       <section>
         <Title>Replace the Moon with...</Title>
         <p className={styles.outline}>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
-          massa.
+          Hove you ever wondered what the night sky would look like if the moon
+          was replaced by other planets?
+          <br />
+          Try switching the planets below to see how it looks like.
         </p>
         <PlanetButtons
           planetProperties={this.state.planetProperties}

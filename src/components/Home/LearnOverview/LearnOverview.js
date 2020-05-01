@@ -17,10 +17,11 @@ const learnOverview = () => {
 
       <Title>Learn</Title>
       <p className={styles.outline}>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-        ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet,
-        consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
-        massa.
+        How much do you know about space?
+        <br /> Do you know how the universe works or what makes life on earth
+        possible?
+        <br /> Take a deep dive into all the interesting facts about our
+        universe.
       </p>
       <ArticleContainer isHome={true} />
       <Button pathName="/learn" type="learnMore">
