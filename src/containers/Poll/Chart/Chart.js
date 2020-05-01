@@ -27,7 +27,7 @@ const Chart = (props) => {
               display: true,
               fontColor: "#fff",
               fontSize: 20,
-              text: "Do you think ther is extraterrestrial life?",
+              text: "Do you think there is extraterrestrial life?",
             },
             scales: {
               yAxes: [
