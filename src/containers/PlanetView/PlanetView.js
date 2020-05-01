@@ -5,7 +5,7 @@ import planetData from "../../data/planetview-data";
 import Title from "./../../components/UI/Title/Title";
 import PlanetButtons from "../../components/Home/PlanetView/PlanetButtons/PlanetButtons";
 import PlanetImage from "../../components/Home/PlanetView/PlanetImage/PlanetImage";
-import DayNightSwitchButton from "../../components/Home/PlanetView/DayNightSwitchButton/DayNightSwitchButton";
+// import DayNightSwitchButton from "../../components/Home/PlanetView/DayNightSwitchButton/DayNightSwitchButton";
 import Button from "./../../components/UI/Button/Button";
 
 class PlaneView extends Component {

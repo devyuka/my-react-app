@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../store/actions";
 import Fade from "react-reveal/Fade";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from "body-scroll-lock";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import styles from "./gallery.module.css";
 import Title from "./../../components/UI/Title/Title";
 import DateInput from "../../components/Gallery/DateInput/DateInput";
