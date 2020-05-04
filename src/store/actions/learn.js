@@ -18,7 +18,7 @@ export const fetchArticlesFailed = (error) => {
 const articles = [
   {
     articleId: 1,
-    articleImg: "article_img_02.jpg",
+    articleImg: "article_img_01.jpg",
     articleTitle: "How did the solar system form?",
     articleBody:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massaLorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massaLorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massaLorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
@@ -26,7 +26,7 @@ const articles = [
   },
   {
     articleId: 2,
-    articleImg: "article_img_03.jpg",
+    articleImg: "article_img_02.jpg",
     articleTitle: "Mystery of the Milkey Way",
     articleBody:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massaLorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massaLorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massaLorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.",
