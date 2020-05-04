@@ -52,15 +52,15 @@
 }
 
 .categoryLabel01 {
-  background-color: #ffa34d;
+  background-color: hsl(111, 50%, 34%);
 }
 
 .categoryLabel02 {
-  background-color: #1eb2a6;
+  background-color: hsl(178, 50%, 36%);
 }
 
 .categoryLabel03 {
-  background-color: #ad62aa;
+  background-color: hsl(320, 53%, 58%);
 }
 
 .articleBox:hover {

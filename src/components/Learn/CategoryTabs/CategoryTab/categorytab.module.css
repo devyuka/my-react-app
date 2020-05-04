@@ -1,11 +1,12 @@
 .categoryTab {
   display: block;
   margin: 0 15px;
+  padding: 6px 0;
+  font-weight: bold;
   transition: all 0.2s ease;
   font-size: 20px;
-  background: #000;
-  color: #f67575;
-  border: 0.5px solid;
+  color: hsl(10, 44%, 43%);
+  border: 2px solid;
   width: 200px;
   text-align: center;
   border-radius: 3px;
@@ -13,35 +14,39 @@
   transition: all 0.3s ease;
 }
 
+.categoryTab::first-letter {
+  font-size: 130%;
+}
+
 .categoryTab:nth-of-type(2) {
-  color: #ffa34d;
+  color: hsl(111, 50%, 34%);
 }
 .categoryTab:nth-of-type(3) {
-  color: #1eb2a6;
+  color: hsl(178, 50%, 36%);
 }
 .categoryTab:nth-of-type(4) {
-  color: #ad62aa;
+  color: hsl(320, 53%, 58%);
 }
 .active {
-  background: #f67575;
-  border: 1px solid #f67575;
+  background: hsl(10, 44%, 43%);
+  border: 2px solid hsl(10, 44%, 43%);
   color: #fff;
   transition: all 0.3s ease;
 }
 
 .categoryTab.active:nth-of-type(2) {
-  background: #ffa34d;
-  border: 1px solid #ffa34d;
+  background: hsl(111, 50%, 34%);
+  border: 2px solid hsl(111, 50%, 34%);
   color: #fff;
 }
 .categoryTab.active:nth-of-type(3) {
-  background: #1eb2a6;
-  border: 1px solid #1eb2a6;
+  background: hsl(178, 50%, 36%);
+  border: 2px solid hsl(178, 50%, 36%);
   color: #fff;
 }
 .categoryTab.active:nth-of-type(4) {
-  background: #ad62aa;
-  border: 1px solid #ad62aa;
+  background: hsl(320, 53%, 58%);
+  border: 2px solid hsl(320, 53%, 58%);
   color: #fff;
 }
 
